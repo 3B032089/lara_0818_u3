@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->bigInteger('post_id');
             $table->text('content');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
